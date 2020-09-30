@@ -35,4 +35,4 @@ while True:
         pressure_2 += random.randint(-6, 8)
         pressure_3 += random.randint(-6, 9)
 
-    time.sleep(1)
+    time.sleep(0.1)
