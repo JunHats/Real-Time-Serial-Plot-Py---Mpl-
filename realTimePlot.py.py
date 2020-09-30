@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-
+import time
 
 plt.style.use('fivethirtyeight')
 
@@ -16,7 +16,7 @@ def animate(i):
     p3 = data['pressure_3']
 
     plt.cla()
-
+    plt.rc('lines', linewidth=1)
     plt.plot(x, p1, label="Pressure Sensor 1")
     plt.plot(x, p2, label="Pressure Sensor 2")
     plt.plot(x, p3, label="Pressure Sensor 3")
@@ -24,6 +24,8 @@ def animate(i):
     plt.legend(loc='upper left')
     plt.tight_layout()
 
+
+time.sleep(1)
 
 anmt = FuncAnimation(plt.gcf(), animate, interval=20)
 
